@@ -194,6 +194,12 @@ func CreateKvSource(traefikConfiguration *cmd.TraefikConfiguration) (*staert.KvS
 			Store:  kvStore,
 			Prefix: traefikConfiguration.Etcd.Prefix,
 		}
+	case traefikConfiguration.Redis != nil:
+		kvStore, err = traefikConfiguration.Redis.CreateStore()
+		kv = &staert.KvSource{
+			Store:  kvStore,
+			Prefix: traefikConfiguration.Redis.Prefix,
+		}
 	case traefikConfiguration.Zookeeper != nil:
 		kvStore, err = traefikConfiguration.Zookeeper.CreateStore()
 		kv = &staert.KvSource{

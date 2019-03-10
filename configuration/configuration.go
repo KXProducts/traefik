@@ -29,6 +29,7 @@ import (
 	"github.com/containous/traefik/provider/marathon"
 	"github.com/containous/traefik/provider/mesos"
 	"github.com/containous/traefik/provider/rancher"
+	"github.com/containous/traefik/provider/redis"
 	"github.com/containous/traefik/provider/rest"
 	"github.com/containous/traefik/provider/zk"
 	"github.com/containous/traefik/tls"
@@ -96,6 +97,7 @@ type GlobalConfiguration struct {
 	Consul                    *consul.Provider        `description:"Enable Consul backend with default settings" export:"true"`
 	ConsulCatalog             *consulcatalog.Provider `description:"Enable Consul catalog backend with default settings" export:"true"`
 	Etcd                      *etcd.Provider          `description:"Enable Etcd backend with default settings" export:"true"`
+	Redis                     *redis.Provider         `description:"Enable Redis backend with default settings" export:"true"`
 	Zookeeper                 *zk.Provider            `description:"Enable Zookeeper backend with default settings" export:"true"`
 	Boltdb                    *boltdb.Provider        `description:"Enable Boltdb backend with default settings" export:"true"`
 	Kubernetes                *kubernetes.Provider    `description:"Enable Kubernetes backend with default settings" export:"true"`

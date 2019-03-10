@@ -55,7 +55,7 @@ _(But if you'd rather configure some of your routes manually, Traefik supports t
 - [Rancher](/configuration/backends/rancher/) (API, Metadata)
 - [Azure Service Fabric](/configuration/backends/servicefabric/)
 - [Consul Catalog](/configuration/backends/consulcatalog/)
-- [Consul](/configuration/backends/consul/) / [Etcd](/configuration/backends/etcd/) / [Zookeeper](/configuration/backends/zookeeper/) / [BoltDB](/configuration/backends/boltdb/)
+- [Consul](/configuration/backends/consul/) / [Etcd](/configuration/backends/etcd/) / [Redis](/configuration/backends/redis/) / [Zookeeper](/configuration/backends/zookeeper/) / [BoltDB](/configuration/backends/boltdb/)
 - [Eureka](/configuration/backends/eureka/)
 - [Amazon ECS](/configuration/backends/ecs/)
 - [Amazon DynamoDB](/configuration/backends/dynamodb/)

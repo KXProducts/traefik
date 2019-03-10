@@ -76,7 +76,7 @@ _(But if you'd rather configure some of your routes manually, Traefik supports t
 - [Rancher](https://docs.traefik.io/configuration/backends/rancher) (API, Metadata)
 - [Azure Service Fabric](https://docs.traefik.io/configuration/backends/servicefabric)
 - [Consul Catalog](https://docs.traefik.io/configuration/backends/consulcatalog)
-- [Consul](https://docs.traefik.io/configuration/backends/consul) / [Etcd](https://docs.traefik.io/configuration/backends/etcd) / [Zookeeper](https://docs.traefik.io/configuration/backends/zookeeper) / [BoltDB](https://docs.traefik.io/configuration/backends/boltdb)
+- [Consul](https://docs.traefik.io/configuration/backends/consul) / [Etcd](https://docs.traefik.io/configuration/backends/etcd) / [Redis](https://docs.traefik.io/configuration/backends/redis) / [Zookeeper](https://docs.traefik.io/configuration/backends/zookeeper) / [BoltDB](https://docs.traefik.io/configuration/backends/boltdb)
 - [Eureka](https://docs.traefik.io/configuration/backends/eureka)
 - [Amazon ECS](https://docs.traefik.io/configuration/backends/ecs)
 - [Amazon DynamoDB](https://docs.traefik.io/configuration/backends/dynamodb)

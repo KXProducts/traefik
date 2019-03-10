@@ -27,6 +27,7 @@ import (
 	"github.com/containous/traefik/provider/marathon"
 	"github.com/containous/traefik/provider/mesos"
 	"github.com/containous/traefik/provider/rancher"
+	"github.com/containous/traefik/provider/redis"
 	"github.com/containous/traefik/provider/zk"
 	"github.com/containous/traefik/safe"
 	traefiktls "github.com/containous/traefik/tls"
@@ -594,6 +595,38 @@ func TestDo_globalConfiguration(t *testing.T) {
 			},
 			Username: "etcd Username",
 			Password: "etcd Password",
+		},
+	}
+	config.Redis = &redis.Provider{
+		Provider: kv.Provider{
+			BaseProvider: provider.BaseProvider{
+				Watch:    true,
+				Filename: "redis Filename",
+				Constraints: types.Constraints{
+					{
+						Key:       "redis Constraints Key 1",
+						Regex:     "redis Constraints Regex 2",
+						MustMatch: true,
+					},
+					{
+						Key:       "redis Constraints Key 1",
+						Regex:     "redis Constraints Regex 2",
+						MustMatch: true,
+					},
+				},
+				Trace:                     true,
+				DebugLogGeneratedTemplate: true,
+			},
+			Endpoint: "redis Endpoint",
+			Prefix:   "redis Prefix",
+			TLS: &types.ClientTLS{
+				CA:                 "redis CA",
+				Cert:               "redis Cert",
+				Key:                "redis Key",
+				InsecureSkipVerify: true,
+			},
+			Username: "redis Username",
+			Password: "redis Password",
 		},
 	}
 	config.Zookeeper = &zk.Provider{

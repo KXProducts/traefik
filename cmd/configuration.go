@@ -26,6 +26,7 @@ import (
 	"github.com/containous/traefik/provider/marathon"
 	"github.com/containous/traefik/provider/mesos"
 	"github.com/containous/traefik/provider/rancher"
+	"github.com/containous/traefik/provider/redis"
 	"github.com/containous/traefik/provider/rest"
 	"github.com/containous/traefik/provider/zk"
 	"github.com/containous/traefik/types"
@@ -118,6 +119,13 @@ func NewTraefikDefaultPointersConfiguration() *TraefikConfiguration {
 	defaultEtcd.Endpoint = "127.0.0.1:2379"
 	defaultEtcd.Prefix = "/traefik"
 	defaultEtcd.Constraints = types.Constraints{}
+
+	// default Redis
+	var defaultRedis redis.Provider
+	defaultRedis.Watch = true
+	defaultRedis.Endpoint = "127.0.0.1:6379"
+	defaultRedis.Prefix = "traefik"
+	defaultRedis.Constraints = types.Constraints{}
 
 	// default Zookeeper
 	var defaultZookeeper zk.Provider
@@ -294,6 +302,7 @@ func NewTraefikDefaultPointersConfiguration() *TraefikConfiguration {
 		Consul:             &defaultConsul,
 		ConsulCatalog:      &defaultConsulCatalog,
 		Etcd:               &defaultEtcd,
+		Redis:              &defaultRedis,
 		Zookeeper:          &defaultZookeeper,
 		Boltdb:             &defaultBoltDb,
 		Kubernetes:         &defaultKubernetes,

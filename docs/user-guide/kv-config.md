@@ -8,6 +8,7 @@ Traefik supports several Key-value stores:
 
 - [Consul](https://consul.io)
 - [etcd](https://coreos.com/etcd/)
+- [Redis](https://redis.io/)
 - [ZooKeeper](https://zookeeper.apache.org/)
 - [boltdb](https://github.com/boltdb/bolt)
 

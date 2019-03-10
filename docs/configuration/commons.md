@@ -169,6 +169,7 @@ Supported Providers:
 - Docker
 - Consul K/V
 - BoltDB
+- Redis
 - Zookeeper
 - ECS
 - Etcd

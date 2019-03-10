@@ -41,6 +41,9 @@ func NewProviderAggregator(gc *GlobalConfiguration) ProviderAggregator {
 	if gc.Etcd != nil {
 		provider.quietAddProvider(gc.Etcd)
 	}
+	if gc.Redis != nil {
+		provider.quietAddProvider(gc.Redis)
+	}
 	if gc.Zookeeper != nil {
 		provider.quietAddProvider(gc.Zookeeper)
 	}
